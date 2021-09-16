@@ -43,18 +43,14 @@ class App extends Component {
           <Router>
             <Navbar />
             <Switch>
-              <Route path='/' exact />
-              <Route path='/categorie' component={AddCategory} />
-              <Route path='/SupprimerCategroie' component={DelCategory} />
-              <Route path='/SupprimerProduit' component={DelItem} />
-              <Route path='/SupprimerCategroie' component={DelCategory} />
-              <Route path='/SupprimerProduit' component={DelItem} />
-
-              <Route path='/modifierCategroie' component={UpdateCategory} />
-              <Route path='/modifierProduit' component={UpdateProduct} />
-              <Route path='/Profile' component={Profile} />
-              <Route path='/product' component={AddProduct} />
-              <Route path='/Stats' component={Stats} />
+              <Route path='/' exact component={Stats} />
+              <Route path='/Profile' exact component={Profile} />
+              <Route path='/categorie' exact component={AddCategory} />
+              <Route path='/modifierCategroie' exact component={UpdateCategory} />
+              <Route path='/SupprimerCategroie' exact component={DelCategory} />
+              <Route path='/product' exact component={AddProduct} />
+              <Route path='/modifierProduit' exact component={UpdateProduct} />
+              <Route path='/SupprimerProduit' exact component={DelItem} />
             </Switch>
           </Router>
         ) : (
